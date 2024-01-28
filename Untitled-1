@@ -1,0 +1,28 @@
+
+print('Hello! We are Gear d Up, a team that works together to create an app and website designed for finding out pogoh bike stations and their distances and cost between each other.')
+
+print('To start, what current bike station are you at?')
+given_station = input("Type here")
+
+import pandas as pd
+import geopandas as gpd
+from shapely.geometry import Point
+%matplotlib inline 
+
+from shapely.geometry import Point
+from shapely.geometry import Point, Polygon
+from mpl_toolkits.basemap import basemap
+import matplotlib.pyplot as pyplot
+from geopy.geocoders import Nominatim
+from geopy.geocoders import GoogleV3
+
+bike = pd.read_csv('bikeStation')
+print(bike.head())
+
+trip = pd.read_csv('tripData')
+trip.columns = [c.replace(' ', '_') for c in trip.columns]
+
+mask_Normal = pd.DataFrame(trip[Closed_Status.contains("NORMAL")])
+
+
+
